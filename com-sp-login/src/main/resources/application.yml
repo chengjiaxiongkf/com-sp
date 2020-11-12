@@ -1,0 +1,9 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: login
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 81.68.125.155:8848

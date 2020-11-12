@@ -15,15 +15,24 @@
     <name>com-sp-login</name>
 
     <properties>
-        <java.version>1.8</java.version>
+        <spring-boot-maven-pulgin.version>2.2.5.RELEASE</spring-boot-maven-pulgin.version>
+        <maven-source-java.version>1.8</maven-source-java.version>
+        <maven-target-java.version>1.8</maven-target-java.version>
     </properties>
-
     <dependencies>
         <!--公共模块依赖包-->
         <dependency>
             <groupId>com.sp.common</groupId>
             <artifactId>com-sp-common</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
 
@@ -56,12 +65,17 @@
         <!-- 给maven配置Java版本 -->
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-maven-pulgin.version}</version>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>${maven-source-java.version}</source>
+                    <target>${maven-target-java.version}</target>
                 </configuration>
             </plugin>
         </plugins>

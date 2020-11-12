@@ -1,5 +1,7 @@
 #内容概述:
-    1. 初识微服务,微服务的前世今身,概念与理解
+    1. 初识微服务,微服务的前世今身
+        什么是微服务：http://blog.cuicc.com/blog/2015/07/22/microservices/
+        微服务的前世今生：https://www.jianshu.com/p/f4a907fe1485 
 	2. maven项目结构及依赖管理，全局变量参数一键打包 开发/生产环境
 	3. springcloud alibaba（SCA） 项目搭建
 	    官网文档：https://spring.io/projects/spring-cloud-alibaba
