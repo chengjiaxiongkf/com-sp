@@ -3,6 +3,7 @@ package com.sp.login.controller;
 import com.sp.common.dto.ResultDTO;
 import com.sp.common.dto.ResultPageDTO;
 import com.sp.common.dto.UserDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -12,9 +13,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/login")
 public class loginController {
+
+    @Value("${server.port}")
+    private String port;
+
     @GetMapping("/testMethod")
     public String testMethod(){
-        return "这是一个nacos客户端";
+        return "这是一个nacos客户端."+port;
     }
 
     @PostMapping("/sign")

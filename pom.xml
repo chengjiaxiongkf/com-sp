@@ -12,6 +12,7 @@
     <modules>
         <module>com-sp-common</module>
         <module>com-sp-login</module>
+        <module>com-sp-user</module>
     </modules>
 
     <properties>

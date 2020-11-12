@@ -1,8 +1,8 @@
 server:
-  port: 9000
+  port: 9020
 spring:
   application:
-    name: com-sp-login
+    name: com-sp-user
   cloud:
     nacos:
       discovery:
