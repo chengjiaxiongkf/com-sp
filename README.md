@@ -1,3 +1,15 @@
+#系统架构                                     
+                                    [request]
+                                        |               
+                                   [keepalived]
+                    |                   |                |
+                 [nginx]             [nginx]          [nginx]
+                 ||||||||||||||||||||||||||||||||||||||||||||                 
+                 [nacos]             [nacos]          [nacos]
+                 ||||||||||||||||||||||||||||||||||||||||||||  
+                  [zuul]             [zuul]           [zuul]
+                 ||||||||||||||||||||||||||||||||||||||||||||
+                [login,login]     [user,user]    [order,order] 
 #内容概述:
     1. 初识微服务,微服务的前世今身
         什么是微服务：http://blog.cuicc.com/blog/2015/07/22/microservices/
