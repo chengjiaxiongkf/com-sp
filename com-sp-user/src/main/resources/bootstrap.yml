@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: com-sp-user
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+      discovery:
+        server-addr: 81.68.125.155:8848
+        namespace: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a

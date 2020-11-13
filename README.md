@@ -27,4 +27,5 @@
 	10. redis一主两从哨兵模式搭建
 #项目结构:
     com-sp-common (公共模块)
-	com-sp-login (登录模块，基于微服务网关统一入口的redis中间件加本地缓存存储登录信息，md5加盐加密方式)
+	com-sp-login (登录模块，基于gateway网关统一入口+redis中间件+cache存储登录信息，md5加盐加密方式)
+	com-sp-user (用户模块，基于webflux响应式流开发)

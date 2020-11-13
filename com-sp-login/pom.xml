@@ -8,21 +8,23 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.sp.login</groupId>
     <artifactId>com-sp-login</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>com-sp-login</name>
 
     <properties>
-        <spring-boot-maven-pulgin.version>2.2.5.RELEASE</spring-boot-maven-pulgin.version>
-        <maven-source-java.version>1.8</maven-source-java.version>
-        <maven-target-java.version>1.8</maven-target-java.version>
     </properties>
     <dependencies>
+        <!--简化javabean-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!--公共模块依赖包-->
         <dependency>
-            <groupId>com.sp.common</groupId>
+            <groupId>com.sp</groupId>
             <artifactId>com-sp-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -33,6 +35,12 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -80,7 +88,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>${maven-compiler.version}</version>
                 <configuration>
                     <source>${maven-source-java.version}</source>
                     <target>${maven-target-java.version}</target>

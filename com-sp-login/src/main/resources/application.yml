@@ -1,9 +1,6 @@
 server:
   port: 9000
-spring:
-  application:
-    name: com-sp-login
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 81.68.125.155:8848
+
+datasource:
+  url: jdbc:mysql://81.68.125.155:3306/nacos
+log: abc

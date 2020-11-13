@@ -1,9 +1,5 @@
 server:
   port: 9020
 spring:
-  application:
-    name: com-sp-user
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 81.68.125.155:8848
+  profiles:
+    active: dev

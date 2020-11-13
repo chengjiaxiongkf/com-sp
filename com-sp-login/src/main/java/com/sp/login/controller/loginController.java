@@ -4,12 +4,14 @@ import com.sp.common.dto.ResultDTO;
 import com.sp.common.dto.ResultPageDTO;
 import com.sp.common.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @author v_jxjxcheng
  * @date 2020-11-12 11:01
  */
+@RefreshScope
 @RestController
 @RequestMapping(value = "/login")
 public class loginController {
@@ -17,9 +19,15 @@ public class loginController {
     @Value("${server.port}")
     private String port;
 
+    @Value("${datasource.url}")
+    private String url;
+
+    @Value("${log}")
+    private String log;
+
     @GetMapping("/testMethod")
     public String testMethod(){
-        return "这是一个nacos客户端."+port;
+        return "这是一个nacos客户端."+port+".动态刷新配置datasourceUrl:"+url+".动态刷新配置:"+log;
     }
 
     @PostMapping("/sign")
