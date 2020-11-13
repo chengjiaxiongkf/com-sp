@@ -1,6 +1,2 @@
 server:
   port: 9000
-
-datasource:
-  url: jdbc:mysql://81.68.125.155:3306/nacos
-log: abc

@@ -5,14 +5,17 @@ spring:
     nacos:
       config:
         server-addr: 81.68.125.155:8848
-        ext-config[0]:
+        namespace: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a
+        extension-configs[0]:
           data-id: application.yml
-          tenant: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a
-          roup: DEV-GROUP
+          group: DEV-GROUP
           refresh: true
-        ext-config[1]:
+        extension-configs[1]:
           data-id: datasource.yml
-          tenant: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a
+          group: DEV-GROUP
+          refresh: true
+        extension-configs[2]:
+          data-id: redis.yml
           group: DEV-GROUP
           refresh: true
       discovery:

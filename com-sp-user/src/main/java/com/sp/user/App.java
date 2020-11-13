@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author v_jxjxcheng
  * @date 2020-11-12 19:35
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.sp.user"})
 @EnableFeignClients
 public class App {
     public static void main(String[] args) {

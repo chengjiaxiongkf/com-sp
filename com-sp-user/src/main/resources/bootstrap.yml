@@ -4,7 +4,21 @@ spring:
   cloud:
     nacos:
       config:
-        file-extension: yml
+        server-addr: 81.68.125.155:8848
+        namespace: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a
+        extension-configs[0]:
+          data-id: application.yml
+          group: DEV-GROUP
+          refresh: true
+        extension-configs[1]:
+          data-id: datasource.yml
+          group: DEV-GROUP
+          refresh: true
+        extension-configs[2]:
+          data-id: redis.yml
+          group: DEV-GROUP
+          refresh: true
       discovery:
         server-addr: 81.68.125.155:8848
         namespace: b5f99e93-f66a-4db6-bbf1-d3656ace4f3a
+        group: DEV-GROUP

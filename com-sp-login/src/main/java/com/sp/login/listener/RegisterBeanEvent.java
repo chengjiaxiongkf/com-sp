@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.context.ApplicationContext;
 
 /**
+ * 一个bean工厂的触发器
  * @author v_jxjxcheng
  * @date 2020-11-13 9:59
  */
@@ -17,6 +18,6 @@ public class RegisterBeanEvent {
     public RegisterBeanEvent(ApplicationContext applicationContext,RegisterBeanListener registerBeanListener){
         this.applicationContext = applicationContext;
         this.registerBeanListener = registerBeanListener;
-        this.registerBeanListener.showListBean(this);
+        this.registerBeanListener.listener(this);
     }
 }

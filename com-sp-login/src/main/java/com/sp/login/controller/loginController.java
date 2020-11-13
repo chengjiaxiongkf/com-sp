@@ -25,9 +25,12 @@ public class loginController {
     @Value("${log}")
     private String log;
 
+    @Value("${redis}")
+    private String redis;
+
     @GetMapping("/testMethod")
     public String testMethod(){
-        return "这是一个nacos客户端."+port+".动态刷新配置datasourceUrl:"+url+".动态刷新配置:"+log;
+        return "这是一个nacos客户端."+port+".动态刷新配置datasourceUrl:"+url+".动态刷新配置:"+log+".redis:"+redis;
     }
 
     @PostMapping("/sign")
