@@ -19,7 +19,7 @@ spring:
           group: DEV-GROUP
           refresh: true
         extension-configs[3]:
-          data-id: kafka.yml
+          data-id: kafka.properties
           group: DEV-GROUP
           refresh: true
       discovery:
